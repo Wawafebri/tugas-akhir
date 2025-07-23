@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tentang - Universitas Handayani Makassar</title>
+  <style>
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+.gallery-item {
+  flex: 1 1 300px;
+  max-width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: scale(0.95);
+  opacity: 0;
+  animation: zoomSlideFade 1s ease forwards;
+}
+
+/* Animasi bergelombang tiap item */
+.gallery-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.gallery-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.gallery-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes zoomSlideFade {
+  0% {
+    transform: translateY(50px) scale(0.9);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px) scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 3px solid #0073e6;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 6px;
+}
+.gallery-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 115, 230, 0.2);
+  transition: box-shadow 0.4s ease;
+}
+
+/* Hover efek dramatis */
+.gallery-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 115, 230, 0.3);
+}
+
+.gallery-item p {
+  padding: 15px;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px 0;
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin: 30px auto;
+      max-width: 1000px;
+    }
+
+    .gallery-item {
+      text-align: center;
+      flex: 1 1 auto;
+      max-width: 300px;
+    }
+
+    .gallery-item img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      padding: 5px;
+      background: #f9f9f9;
+      border-radius: 4px;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Universitas Handayani Makassar</h1>
+      <nav>
+        <ul>
+          <li><a href="proyek final pak adnan.html">Beranda</a></li> 
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="programstudi.html">Program Studi</a></li>
+          <li><a href="beritaacara.html">Berita Acara</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+          <li><a href="pendaftaran.html">Pendaftaran</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="galeri 1.jpg" alt="Kegiatan Kampus 1">
+      <p>Selamat kepada Bapak/Ibu Dosen Universitas Handayani Makassar atas penerimaan pendanaan 
+         program penelitian dan pengabdian kepada masyarakat DPPM Dikti Tahun Anggaran 2025</p>
+    </div>
+    <div class="gallery-item">
+      <img src="galeri 2.jpg" alt="Kegiatan Kampus 2">
+      <p>Segenap Civitas Akademika Universitas Handayani Makassar yang memberikan Apresiasi 
+         kepada Mahasiswa Universitas Handayani Makassar yang dinyatakan Lolos dalam Pekan Kreativitas Mahasiswa PKM-KI dan PKM-KC</p>
+    </div>
+    <div class="gallery-item">
+      <img src="galeri 3.jpg" alt="Kegiatan Kampus 3">
+      <p>Prestasi Dosen bapak/ibu dosen Universitas Handayani Makassar yang telah 
+         meraih gelar Insinyur (Ir) pada Program Profesi Insinyur Fakultas Teknik 
+         Universitas Negeri Makassar </p>
+    </div>
+  </div>
+      
+  <footer>
+    &copy; 2025 Universitas Handayani Makassar. All rights reserved.
+  </footer>
+
+</body>
+</html>
