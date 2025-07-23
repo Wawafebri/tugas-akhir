@@ -1,0 +1,645 @@
+/* Reset dan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  position: relative;
+  height: 100px;
+  background: linear-gradient(90deg, #004d99, #0073e6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+  height: 80px;
+}
+
+.judul {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.content {
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #004d99, #0073e6);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex; /* Menggunakan flexbox untuk logo, h1, dan navigasi */
+    justify-content: center; /* Menjaga logo/h1 di kiri, nav di kanan */
+    align-items: center; /* Pusatkan secara vertikal */
+    flex-wrap: wrap; /* Memungkinkan elemen wrap di layar kecil */
+    padding: 0 30px; /* Tambahkan padding horizontal agar tidak menempel tepi */
+}
+
+/* Gaya untuk Logo */
+.logo {
+    flex-shrink: 0; /* Mencegah logo menyusut */
+    margin-right: 15px; /* Jarak antara logo dan teks h1 */
+    display: flex; /* Agar logo dan h1 bisa berdampingan dalam satu grup */
+    align-items: center;
+}
+
+.logo img {
+    height: 70px; /* ATUR TINGGI LOGO DI SINI SESUAI KEBUTUHAN ANDA */
+    width: auto; /* Biarkan lebar menyesuaikan proporsi */
+    display: block;
+}
+
+/* Mengembalikan dan menata h1 di header agar muncul di samping logo */
+header h1 {
+    display: inline-block; /* Membuat h1 muncul sebaris dengan logo */
+    font-size: 24px; /* Ukuran font yang Anda inginkan */
+    margin: 0; /* Hapus margin default h1 */
+    color: white; /* Pastikan warnanya putih */
+    flex-shrink: 0; /* Mencegah teks menyusut */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section: gambar full layar (pertahankan jika di index.html) */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url('foto 1.jpg'); /* Pastikan path benar */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    color: #fff;
+    padding: 20px 40px;
+    max-width: 90%;
+}
+
+.hero-overlay h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.hero-overlay p {
+    font-size: 18px;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* (Bagian ini tidak diubah karena diasumsikan untuk index.html) */
+
+/* Tambahan jika ada elemen lain */
+section {
+    padding: 2rem 0;
+}
+
+/* ===== TATA LETAK TENTANG, VISI, MISI ===== */
+.about h2 {
+    margin-bottom: 1rem;
+    color: #004d99;
+    text-align: center;
+    font-size: 26px;
+}
+
+.about p {
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.about ul {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.about ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+    list-style-type: disc;
+}
+
+/* ---------------------------------------------------------------------- */
+/* --- Gaya KHUSUS untuk Halaman Berita Acara (beritaacara.html) --- */
+/* ---------------------------------------------------------------------- */
+/* Catatan: 'news-page-container' dan 'main-content' digunakan di beritaacara.html */
+.news-page-container {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: flex; /* Tetap flex untuk layout kartu */
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.main-content {
+    flex: 1; /* Mengambil seluruh lebar yang tersedia di beritaacara.html */
+    padding-right: 0; /* Pastikan tidak ada padding di kanan */
+    min-width: unset;
+}
+
+
+.page-title { /* H1 di dalam news-section, digunakan di beritaacara.html */
+    font-size: 2.5em;
+    color: #004d99;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 0;
+    font-weight: bold;
+}
+.page-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Featured News Card (Large Article) - Digunakan di beritaacara.html */
+.featured-news-card {
+    display: flex;
+    margin-bottom: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    background-color: #fff;
+}
+
+.featured-news-card .news-image {
+    flex: 1;
+    min-width: 350px;
+}
+
+.featured-news-card .news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-news-card .news-content {
+    flex: 2;
+    padding: 30px;
+}
+
+.news-meta .date {
+    background-color: #007bff;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.featured-news-card h3 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    text-align: left;
+    font-weight: bold;
+}
+.featured-news-card h3::after {
+    display: none;
+}
+
+.news-author-category {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.featured-news-card p {
+    line-height: 1.7;
+    color: #555;
+    font-size: 1em;
+}
+
+.featured-news-card p a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.featured-news-card p a:hover {
+    text-decoration: underline;
+}
+
+/* Other News Section - Digunakan di beritaacara.html */
+.other-news {
+    margin-top: 50px;
+}
+
+.other-news h2 {
+    font-size: 2em;
+    color: #004d99;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.other-news h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #007bff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.news-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.news-card .news-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.news-card .news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-card .news-content {
+    padding: 20px;
+}
+
+.news-card h3 {
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.news-card p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: white;
+    color: blue;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+.read-more {
+    border: 2px solid white;
+    letter-spacing: 0.5px;
+}
+
+.read-more:hover {
+    background-color: white;
+}
+
+/* ---------------------------------------------------------------------- */
+/* --- Gaya KHUSUS untuk Halaman Detail Berita (berita-magang-riset.html, penerimaan-maba-2025.html, dll.) --- */
+/* ---------------------------------------------------------------------- */
+.news-detail-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 30px 50px; /* Padding atas, samping, bawah */
+}
+
+.news-detail-content {
+    width: 100%; /* Pastikan mengambil seluruh lebar container */
+    background-color: #ffffff;
+    padding: 30px 40px; /* Padding internal konten berita */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.news-detail-header {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.news-detail-date {
+    background-color: #007bff;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.news-detail-header h1 {
+    font-size: 2.5em; /* Ukuran judul berita utama */
+    color: #2c3e50;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+.news-detail-image {
+    margin-bottom: 30px;
+    text-align: center; /* Untuk memusatkan gambar jika lebih kecil dari lebar */
+}
+
+.news-detail-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Sudut membulat pada gambar berita */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-detail-body p {
+    margin-bottom: 1.5em;
+    line-height: 1.7;
+    color: #444;
+    text-align: justify;
+}
+
+.news-detail-body ol, .news-detail-body ul {
+    margin-bottom: 1.5em;
+    padding-left: 2em;
+}
+
+.news-detail-body ol li, .news-detail-body ul li {
+    margin-bottom: 0.5em;
+    line-height: 1.6;
+}
+
+.news-detail-body h3 {
+    font-size: 1.6em;
+    color: #004d99;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Gaya untuk galeri gambar di dalam berita detail (seperti kip1.jpg, kip2.jpg) */
+.news-detail-body .kip-gallery {
+    display: flex; /* Mengatur gambar berdampingan */
+    flex-wrap: wrap; /* Memungkinkan gambar pindah ke baris baru jika tidak cukup ruang */
+    gap: 20px; /* Jarak antara gambar */
+    justify-content: center; /* Memusatkan gambar dalam galeri */
+    margin: 30px 0; /* Margin atas dan bawah untuk galeri */
+}
+
+.news-detail-body .gallery-image {
+    max-width: 48%; /* Mengatur lebar maksimum setiap gambar menjadi sekitar setengah dari kontainer (disisakan gap) */
+    height: auto; /* Mempertahankan rasio aspek gambar */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi jika tinggi diatur */
+    flex-grow: 1; /* Memungkinkan gambar untuk tumbuh mengisi ruang */
+    min-width: 250px; /* Lebar minimum sebelum gambar pindah ke baris baru */
+}
+
+
+/* Footer */
+footer {
+    background: #004d99;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    padding-bottom: 20px;
+}
+
+/* ===== Footer Tambahan: Grid Kolom ===== */
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+    text-align: left;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 15px;
+}
+
+.footer-column h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+.footer-column h2::after {
+    display: none;
+}
+
+.footer-column p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+/* ===== Sosial Media Ikon ===== */
+.social-icon {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+}
+
+footer p:last-child {
+    font-size: 0.85em;
+    color: #aaa;
+    margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    header h1 { /* Ini akan diabaikan karena display:none di atas */
+        margin-bottom: 15px;
+    }
+    nav ul {
+        margin-top: 10px;
+        gap: 0.8rem;
+    }
+    nav a {
+        padding: 6px 10px;
+    }
+
+    /* Penyesuaian untuk beritaacara.html jika ada */
+    .news-page-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .main-content {
+        padding-right: 0;
+        min-width: unset;
+    }
+    /* Hapus .sidebar dari media query karena sudah dihapus */
+
+    .featured-news-card {
+        flex-direction: column;
+    }
+    .featured-news-card .news-image {
+        min-width: unset;
+        height: 250px;
+    }
+    .featured-news-card .news-content {
+        padding: 20px;
+    }
+    .featured-news-card h3 {
+        font-size: 1.8em;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-column {
+        text-align: center;
+        padding: 0;
+    }
+
+    /* Untuk news-detail-container di layar kecil */
+    .news-detail-container {
+        padding: 20px 15px 40px; /* Padding lebih kecil untuk mobile */
+    }
+    .news-detail-content {
+        padding: 20px 25px; /* Padding internal konten lebih kecil */
+    }
+    .news-detail-header h1 {
+        font-size: 2em;
+    }
+    .news-detail-body h3 {
+        font-size: 1.4em;
+    }
+    /* Responsif untuk gambar galeri di layar kecil */
+    .news-detail-body .kip-gallery {
+        flex-direction: column; /* Gambar akan disusun vertikal di layar sangat kecil */
+        align-items: center; /* Memusatkan gambar vertikal */
+    }
+    .news-detail-body .gallery-image {
+        max-width: 90%; /* Ambil lebih banyak lebar di layar kecil */
+        min-width: unset; /* Hapus min-width */
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px 15px;
+    }
+    header h1 {
+        font-size: 20px;
+    }
+    nav ul {
+        gap: 0.5rem;
+    }
+    nav a {
+        font-size: 0.9em;
+        padding: 5px 8px;
+    }
+    .page-title {
+        font-size: 2em;
+    }
+    .featured-news-card h3 {
+        font-size: 1.4em;
+    }
+    .news-card h3 {
+        font-size: 1.2em;
+    }
+    .news-detail-header h1 {
+        font-size: 1.8em;
+    }
+    .news-detail-body p {
+        font-size: 1em;
+    }
+}

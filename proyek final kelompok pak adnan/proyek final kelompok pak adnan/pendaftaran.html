@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pendaftaran | Universitas Handayani Makassar</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #005eb8;
+      color: white;
+      padding: 15px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .form-section {
+      background-color: #f4f4f4;
+      padding: 60px 20px;
+    }
+
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .form-container {
+      background-image: url('samurai.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 25px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 10px 15px blue;
+      position: relative;
+      animation: fadeSlideUp 0.8s ease-out;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .form-container::before {
+     content: "";
+     position: absolute;
+     top: 0; left: 0; right: 0; bottom: 0;
+     background: rgba(255, 255, 255, 0.4); 
+     backdrop-filter: blur(0.10px);         
+     border-radius: 8px;
+     z-index: 0;
+    }
+
+    .form-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .form-container h2,
+    .form-container form {
+      position: relative;
+      z-index: 1;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #2a8ef2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #006fd0;
+      transform: scale(1.02);
+    }
+
+    footer {
+      background-color: #005eb8;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Universitas Handayani Makassar</h1>
+      <nav>
+        <ul>
+          <li><a href="proyek final pak adnan.html">Beranda</a></li> 
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="programstudi.html">Program Studi</a></li>
+          <li><a href="beritaacara.html">Berita Acara</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+          <li><a href="pendaftaran.html">Pendaftaran</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="form-section">
+    <div class="form-container" id="pendaftaran">
+      <h2 style="text-align:center;">Form Pendaftaran Mahasiswa Baru</h2>
+      <form action="proses_pendaftaran.php" method="post">
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telepon">No. Telepon:</label>
+        <input type="tel" id="telepon" name="telepon" required>
+
+        <label for="prodi">Program Studi:</label>
+        <select id="prodi" name="prodi" required>
+          <option value="">-- Pilih Program Studi --</option>
+          <option value="informatika">Teknik Informatika</option>
+          <option value="sistem-informasi">Sistem Informasi</option>
+          <option value="manajemen">Manajemen</option>
+          <option value="akuntansi">Akuntansi</option>
+        </select>
+
+        <label>Jenis Kelamin:</label>
+        <input type="radio" id="laki" name="gender" value="Laki-laki" required>
+        <label for="laki" style="display:inline;">Laki-laki</label>
+        <input type="radio" id="perempuan" name="gender" value="Perempuan" required>
+        <label for="perempuan" style="display:inline;">Perempuan</label>
+
+        <button type="submit">Daftar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Universitas Handayani Makassar. Hak Cipta Dilindungi.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
