@@ -107,7 +107,7 @@ nav a:hover {
     position: relative;
     width: 100%;
     height: 500px;
-    background-image: url('foto 1.jpg'); /* Pastikan path benar */
+    background-image: url('asset/foto\ 2.jpg'); /* Pastikan path benar */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -143,37 +143,68 @@ section {
 }
 
 /* ===== TATA LETAK TENTANG, VISI, MISI ===== */
+.about {
+  padding: 20px 0;
+}
+
 .about h2 {
-    margin-bottom: 1rem;
-    color: #004d99;
-    text-align: center;
-    font-size: 26px;
+  margin-bottom: 1rem;
+  color: #004d99;
+  text-align: center;
+  font-size: 26px;
 }
 
 .about p {
-    text-align: justify;
-    margin-bottom: 1rem;
+  text-align: justify;
+  font-size: 18px;
+  margin-bottom: 1rem;
+  padding: 0 40px;
 }
 
 .about ul {
-    padding-left: 1.5rem;
-    margin-top: 0.5rem;
+  padding-left: 60px;
+  padding-right: 40px;
+  margin-bottom: 1rem;
 }
 
 .about ul li {
-    margin-bottom: 0.75rem;
-    line-height: 1.5;
-    list-style-type: disc;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  font-size: 18px;
+  list-style-type: disc;
 }
 
-/* ---------------------------------------------------------------------- */
-/* --- Gaya KHUSUS untuk Halaman Berita Acara (beritaacara.html) --- */
-/* ---------------------------------------------------------------------- */
-/* Catatan: 'news-page-container' dan 'main-content' digunakan di beritaacara.html */
+.about .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ==== Profil Rektor ==== */
+.profil-rektor {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.profil-rektor img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.profil-rektor p {
+  flex: 1;
+  text-align: justify;
+}
+
+
 .news-page-container {
     padding-top: 30px;
     padding-bottom: 50px;
-    display: flex; /* Tetap flex untuk layout kartu */
+    display: flex; 
     gap: 30px;
     flex-wrap: wrap;
 }
@@ -479,60 +510,58 @@ footer {
     padding-bottom: 20px;
 }
 
-/* ===== Footer Tambahan: Grid Kolom ===== */
+/* ===== FOOTER STYLE ===== */
+footer {
+  background-color: #004d99;
+  color: white;
+  padding: 40px 40px 20px;
+}
+
 .footer-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-    margin-top: 20px;
-    text-align: left;
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 .footer-column {
-    flex: 1;
-    min-width: 250px;
-    padding: 0 15px;
+  flex: 1 1 300px;
 }
 
 .footer-column h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #ffffff;
-    text-align: left;
-    font-weight: bold;
-}
-.footer-column h2::after {
-    display: none;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #aaa;
 }
 
 .footer-column p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #e0e0e0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ddd;
 }
 
 /* ===== Sosial Media Ikon ===== */
 .social-icon {
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 20px;
-    color: white;
-    transition: transform 0.2s ease;
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 20px;
+  color: white;
+  transition: transform 0.2s ease;
 }
 
 .social-icon:hover {
-    color: #ffd700;
-    transform: scale(1.2);
+  color: #aaa;
+  transform: scale(1.2);
 }
 
 footer p:last-child {
-    font-size: 0.85em;
-    color: #aaa;
-    margin-top: 20px;
+  font-size: 0.85em;
+  color: #aaa;
+  margin-top: 20px;
+  text-align: center;
 }
+
 
 /* Responsive Adjustments */
 @media (max-width: 900px) {
