@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Universitas Handayani Makassar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<header>
+  <div class="header">
+    <img src="asset/logo.png" class="logo" alt="Logo Universitas"> 
+    <a href="proyek final pak adnan.html">
+      <h1 class="judul">Universitas Handayani Makassar</h1>
+    </a>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="proyek final pak adnan.html">Beranda</a></li> 
+      <li><a href="tentang.html">Tentang</a></li>
+      <li><a href="programstudi.html">Program Studi</a></li>
+      <li><a href="beritaacara.html">Berita Acara</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+      <li><a href="pendaftaran.html">Pendaftaran</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-overlay">
+    <h2>Selamat Datang di Universitas Handayani</h2>
+    <p>Pendidikan Berkualitas untuk Masa Depan Gemilang</p>
+  </div>
+  <div class="hero-nav">
+    <button class="nav-btn left">&#10094;</button>
+    <button class="nav-btn right">&#10095;</button>
+  </div>
+</div>
+
+<section class="program-studi">
+  <h2>Program Studi</h2>
+  <div class="card-container">
+    
+    <div class="card"  onclick="openModal('modalDiploma')">
+      <img src="asset/diploma.jpg" alt="Diploma">
+      <div class="label">★ Diploma</div>
+      <div class="overlay">
+        <h3>D3 Komputer Akuntansi</h3>
+        <h3>D3 Manajemen Informatika</h3>
+        <div class="arrow">➤</div>
+      </div>
+      <div class="footer">SPP 1jt-an</div>
+    </div>
+
+    <div class="card" onclick="openModal('modalSarjana')">
+      <img src="asset/sarjana.jpg" alt="Sarjana">
+      <div class="label blue">★ Sarjana</div>
+      <div class="overlay blue-bg">
+        <h3>S1 Sistem Komputer</h3>
+        <h3>S1 Teknik Informatika</h3>
+        <h3>S1 Sistem Informasi</h3>
+        <div class="arrow">➤</div>
+      </div>
+      <div class="footer">Tersedia Kelas Malam dan Weekend</div>
+    </div>
+
+    <div class="card" onclick="openModal('modalMagister')">
+      <img src="asset/magister.jpg" alt="Magister">
+      <div class="label dark">★ Magister</div>
+      <div class="overlay dark-bg">
+        <h3>S2 Sistem Informasi</h3>
+        <div class="arrow">➤</div>
+      </div>
+      <div class="footer">Kelas Eksekutif Tersedia</div>
+    </div>
+
+  </div>
+</section>
+
+<div id="modalDiploma" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalDiploma')">&times;</span>
+    <h2>Program Diploma 3</h2>
+    <p>
+      Program Pendidikan Jenjang Diploma adalah merupakan program pendidikan yang bertujuan untuk mendidik calon ahli madya komputer (A.Md) yang memiliki pengetahuan dan keterampilan sesuai dengan bidangnya yang digeluti dengan jangka waktu 6 Semester.
+    </p>
+
+    <h3>MANAJEMEN INFORMATIKA – MI (Terakreditasi C)</h3>
+    <strong>Tujuan:</strong>
+    <ul>
+      <li>Menghasilkan tenaga ahli madya yang memiliki kemampuan untuk mengamati, memahami dan terampil dalam Manajemen Teknologi Informasi.</li>
+    </ul>
+    <strong>Sasaran:</strong>
+    <ul>
+      <li>Menghasilkan lulusan yang terampil dan siap pakai dalam menggunakan aplikasi yang berhubungan dengan teknologi informasi.</li>
+      <li>Menghasilkan lulusan yang mampu merancang sistem dan organisasi manajemen pengolahan data.</li>
+      <li>Menciptakan lulusan yang handal berkarya dalam bidang pemrograman serta menguasai beberapa aplikasi komputer bisnis.</li>
+      <li>Menjadikan program studi sebagai sarana pengembangan tenaga ahli madya di bidang teknologi informasi yang siap kerja di berbagai lapangan industri, pemerintahan, swasta, maupun koperasi dan berwirausaha.</li>
+    </ul>
+
+    <h3>KOMPUTERISASI AKUNTANSI (Terakreditasi B)</h3>
+    <strong>Tujuan:</strong>
+    <ul>
+      <li>Menghasilkan tenaga ahli madya yang memiliki kemampuan untuk mengamati, memahami dan terampil dalam bidang Komputerisasi Akuntansi.</li>
+    </ul>
+    <strong>Sasaran:</strong>
+    <ul>
+      <li>Menghasilkan lulusan yang terampil dan siap pakai dalam menggunakan aplikasi yang berhubungan dengan Teknologi Informasi Akuntansi.</li>
+      <li>Menghasilkan lulusan yang mampu mengikuti perkembangan IPTEK yang terkait dengan bidang ilmunya.</li>
+      <li>Menciptakan lulusan yang handal berkarya dalam kegiatan di segala sektor pembangunan dan menjadi panutan dalam masyarakat.</li>
+      <li>Menjadikan program studi sebagai sarana pengembangan tenaga ahli madya di bidang teknologi informasi yang siap kerja di bidang lapangan industri, pemerintahan, swasta, maupun koperasi dan berwirausaha.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="modalSarjana" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalSarjana')">&times;</span>
+    <h2>Program Sarjana</h2>
+
+    <h3>S1 Sistem Komputer (Terakreditasi C)</h3>
+    <p>Menghasilkan Sarjana Komputer yang menguasai Rekayasa Perangkat keras (Hardware), Instalasi Jaringan Komputer, perancangan dan perakitan komputer, Robotika, Mikrokontroler, PLC, Troubleshooting serta menguasai pemrograman aplikasi dan kemampuan bahasa pemrograman untuk pengolahan perangkat keras.</p>
+    <strong>Konsentrasi Jurusan:</strong>
+    <ol>
+      <li>Jaringan Komputer, Pemrograman, Linux dan Administrator.</li>
+      <li>Rekayasa Hardware, Perangkat Komputer, Robotika dan Embedded System.</li>
+    </ol>
+    <p><strong>Kelas:</strong><br>
+      • Reguler (Senin–Sabtu, 08.00–17.00 WITA).<br>
+      • Malam (Senin–Sabtu, 17.00–22.00 WITA).
+    </p>
+
+    <h3>S1 Teknik Informatika (Terakreditasi C)</h3>
+    <p>Menghasilkan Sarjana Komputer yang menguasai rekayasa perangkat lunak (Software), Jaringan Komputer dan perancangan sistem, aplikasi komputer grafik, desain web, computer aided design, sistem informasi, database sistem, multimedia dan kemampuan bahasa pemrograman.</p>
+    <strong>Konsentrasi Jurusan:</strong>
+    <ol>
+      <li>Multimedia, Desain, Animasi dan Game.</li>
+      <li>Web Desain, Website System, Database dan Jaringan.</li>
+      <li>Rekayasa Perangkat Lunak, Pemrograman Komputer dan Database System.</li>
+    </ol>
+    <p><strong>Kelas:</strong><br>
+      • Reguler (Senin–Sabtu, 08.00–17.00 WITA).<br>
+      • Malam (Senin–Sabtu, 17.00–22.00 WITA).<br>
+      • Executive (Sabtu–Minggu, 08.00–20.00 WITA).
+    </p>
+
+    <h3>S1 Sistem Informasi (Terakreditasi C)</h3>
+    <p>Menghasilkan Sarjana Komputer yang dapat menganalisis dan mendesain sistem informasi, membangun dan merancang suatu sistem informasi sehingga dapat diolah dan dikompilasi menjadi suatu informasi untuk para pengambil keputusan (System Development Life Cycle).</p>
+  </div>
+</div>
+
+<div id="modalMagister" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalMagister')">&times;</span>
+    <h2>Program Pascasarjana</h2>
+    <p><strong>IZIN PENYELENGGARAAN:</strong><br>
+    Berdasarkan SK Mendikbud RI No: 126/E/O/2013 tanggal 18 April 2013</p>
+
+    <h3>Sistem Pendidikan</h3>
+    <p>
+      Program Magister Sistem Komputer dilaksanakan dengan sistem kredit sebanyak 45 SKS: 12 SKS mata kuliah wajib, 17 SKS minat, 10 SKS pilihan, dan 6 SKS tesis. 
+      Perkuliahan: 20 bulan (2 bulan matrikulasi, 16 bulan perkuliahan, 2 bulan tesis).
+    </p>
+
+    <h3>Tentang Pascasarjana STMIK Handayani</h3>
+    <p>
+      Satu-satunya Program Magister Sistem Komputer (S2) di Indonesia Timur. Lulusan mendapatkan gelar <strong>M.Kom</strong> (Magister Komputer).
+    </p>
+
+    <h3>Syarat Pendaftaran</h3>
+    <ul>
+      <li>WNI / WNA dengan izin dari Ditjen DIKTI</li>
+      <li>Lulusan S1 / sederajat dengan IPK ≥ 2.75 atau pengalaman kerja memadai</li>
+      <li>Sehat jasmani & rohani</li>
+      <li>2 surat rekomendasi dari dosen bergelar doktor/magister</li>
+      <li>Bukti pembayaran pendaftaran Rp 500.000,-</li>
+      <li>Fotokopi ijazah & transkrip legalisir</li>
+      <li>Pas foto: 2x3 (4), 3x4 (4), 4x6 (4)</li>
+      <li>Mengisi dan menyerahkan formulir ke sekretariat Pascasarjana</li>
+    </ul>
+
+    <h3>Pengelola</h3>
+    <ul>
+      <li>Direktur: Dr. Eng. Yuyun, S.Kom., MT</li>
+      <li>Ketua Prodi: Prof. Dr. Ir. Andani Achamd, MT</li>
+      <li>Sekretaris Prodi: Absri, S.S., M.Hum</li>
+      <li>Staf: Dahriati, Amd.</li>
+    </ul>
+
+    <h3>Biaya & Periode Pendaftaran</h3>
+    <p>
+      Biaya per semester: Rp. 7.500.000,-<br>
+      Pendaftaran dibuka setiap semester:<br>
+      - Ganjil: November – Februari<br>
+      - Genap: April – Agustus
+    </p>
+
+    <h3>Kontak</h3>
+    <ul>
+      <li>Website: <a href="http://pps.handayani.ac.id" target="_blank">pps.handayani.ac.id</a></li>
+      <li>Email: pps@handayani.ac.id</li>
+      <li>Telp: +62-411-4673395</li>
+      <li>HP: +62-853-9635-2227</li>
+      <li>Alamat: Jl. Adhyaksa Baru No. 1 Makassar, Sulawesi Selatan, 90231</li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-column">
+        <h2>Tentang Universitas</h2>
+        <p>Universitas Handayani Makassar adalah Lembaga Pendidikan Tinggi di Kopertis Wilayah IX, berdiri sejak tahun 1996 dan menjadi pelopor Program Magister Komputer (M.Kom) di Indonesia Timur sejak 2013.</p>
+      </div>
+      <div class="footer-column">
+        <h2>Kontak Kami</h2>
+        <p>Jl. Adhyaksa Baru No. 1<br>
+        Telp. (0411) 4673395<br>
+        Makassar - Sulawesi Selatan, Indonesia<br>
+        Email: info@handayani.ac.id</p>
+      </div>
+      <div class="footer-column">
+        <h2>Follow Us</h2>
+        <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <br>
+    <p>&copy; 2025 Universitas Handayani Makassar. Hak Cipta Dilindungi.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+  }
+  function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+</script>
+</body>
+</html>
